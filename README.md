@@ -8,6 +8,19 @@ A way to create modals that are easily reusable, encapsulated, and handle the re
 
 The goal of `react-native-use-modal` is to make all the functions of `react-native-modal` available and convenient to use at the same time.
 
+
+# Why a fork?
+
+The original package had:
+- react-native-modal pinned to a version incompatible with React Native ≥ 0.78
+- Outdated TypeScript typings (React.VoidFunctionComponent) incompatible with React 19
+
+This fork:
+- Upgrades react-native-modal to ^14.0.0-rc.1 for RN 0.78+ compatibility
+- Updates typings to work with React 19 (React.FC + explicit children)
+- Fixes cloneElement typings to avoid TypeScript errors
+- Cleans up peerDependencies to prevent install conflicts
+
 ## Feature
 
 - Show modal and get result as promise
