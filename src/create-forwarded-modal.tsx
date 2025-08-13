@@ -7,7 +7,7 @@ import { useForwardedModalViewModel } from './use-forwarded-modal-view-model';
 type ContentComponent<
   Data extends unknown = void, // 모달 결과로 받을 값의 타입
   Param extends unknown = void
-> = React.VoidFunctionComponent<{
+> = React.FC<{
   confirm: ModalConfirmFunction<Data>; // 모달 종료 함수 (승인)
   cancel: () => void; // 모달 종료 함수 (취소)
   param: Param | null;

@@ -36,7 +36,7 @@ export const useModal = <
   );
 
   useEffect(() => {
-    const clone = React.cloneElement<ModalRef>(modal, {
+    const clone = React.cloneElement<ModalRef>(modal as any, {
       ref: (instance) => {
         instance$.next(instance);
       },

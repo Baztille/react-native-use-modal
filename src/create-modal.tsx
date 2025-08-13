@@ -17,7 +17,7 @@ export type CreateModalFunctionParam<
   Param extends unknown = void
 > = [
   // 모달 내용 컴포넌트
-  Content: React.VoidFunctionComponent<{
+  Content: React.FC<{
     confirm: ModalConfirmFunction<Data>; // 모달 종료 함수 (승인)
     cancel: () => void; // 모달 종료 함수 (취소)
     param: Param;
